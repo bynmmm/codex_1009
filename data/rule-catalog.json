@@ -1,0 +1,437 @@
+{
+  "sourceTitle": "NOMI建议 - 故事集 / 全量集",
+  "sourceUrl": "https://nio.feishu.cn/wiki/XQRJwXRxqimYQwkLcV4cA0Mcngd?table=tblNPIICFKWOMtt8&view=vew2kUwSLN",
+  "sourceRecordCount": 66,
+  "extractedPrimaryCount": 61,
+  "scope": "从Chrome界面读取61个主条目，子记录中的同能力文案变体合并；并非66行逐字段导出，未逐项核验上线状态。",
+  "conditionNote": "visibleWhy为表格可见副标题/需求线索，不等于完整车端触发逻辑；未读取数值阈值、传感器接口、完整配置。空条件必须保留未知，不可视为自动满足。",
+  "entries": [
+    {
+      "id": "1",
+      "title": "开启守卫模式？",
+      "visibleWhy": "车位好像有点窄；停车位置好像有点陌生",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "2",
+      "title": "开启后视镜加热？",
+      "visibleWhy": "下雨了，后视镜可能会有雾",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "3",
+      "title": "开启后排儿童锁？",
+      "visibleWhy": "好像有儿童在后排",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "4",
+      "title": "开启湿地模式？",
+      "visibleWhy": "下雨了，路面可能有点滑；路看起来有点滑",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "5",
+      "title": "打开雪地模式？",
+      "visibleWhy": "路面上有雪，可能会有点滑",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "6",
+      "title": "雨天开启外后视镜影像？",
+      "visibleWhy": "雨天补盲，侧方视野更清晰",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "7",
+      "title": "续航风险提醒",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "8",
+      "title": "限行提示",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "9",
+      "title": "回家去？",
+      "visibleWhy": "大约需要 $ETA$ 分钟",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "10",
+      "title": "上班去？",
+      "visibleWhy": "大约需要 $ETA$ 分钟",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "11",
+      "title": "开启隐身模式？",
+      "visibleWhy": "一键调整灯光照明至「隐身」",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "12",
+      "title": "开启离车不下电？",
+      "visibleWhy": "临时离车保持车内舒适",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "13",
+      "title": "自动调整HUD？",
+      "visibleWhy": "会根据座椅位置自动调整HUD（原文尾部未完整显示）",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "14",
+      "title": "备注目的地？",
+      "visibleWhy": "下次出发更快捷",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "15",
+      "title": "终点停车场推荐",
+      "visibleWhy": "了解车位空闲、收费等",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "16",
+      "title": "泊车推荐",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "17",
+      "title": "主动加电",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "18",
+      "title": "PSP意图推荐",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "19",
+      "title": "通勤提示",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "20",
+      "title": "高速卡片",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "21",
+      "title": "停车推荐",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "22",
+      "title": "PN位置卡片",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "23",
+      "title": "PSP使用提示",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "24",
+      "title": "VLA意图推荐",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "25",
+      "title": "消息助手-消息总结",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "26",
+      "title": "消息助手-地址信息",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "27",
+      "title": "开启后排静音？",
+      "visibleWhy": "后排的乘客好像睡着了",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "28",
+      "title": "驾驶模式调为「舒适」？",
+      "visibleWhy": "似乎有儿童在车上",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "29",
+      "title": "驾驶模式调为「舒适」？",
+      "visibleWhy": "纵享舒适的辅助驾驶旅程",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "30",
+      "title": "暖和儿一点！",
+      "visibleWhy": "车里似乎有点冷",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "31",
+      "title": "凉快一点！",
+      "visibleWhy": "车里似乎有点热",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "32",
+      "title": "开启PM2.5净化？",
+      "visibleWhy": "车里的空气质量有点差；子条目「透会儿气？」",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "33",
+      "title": "休息一会儿？",
+      "visibleWhy": "与爱车一起充会儿电吧！",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "34",
+      "title": "收起副驾座椅？",
+      "visibleWhy": "可以让后排空间大一些",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "35",
+      "title": "驾驶模式改为后排尊享？",
+      "visibleWhy": "让后排享受更舒适的乘坐体验",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "36",
+      "title": "复原副驾座椅？",
+      "visibleWhy": "让副驾座椅回到默认位置",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "37",
+      "title": "开启空调内循环？",
+      "visibleWhy": "前方看起来尘土飞扬",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "38",
+      "title": "开启车外尾气防护？",
+      "visibleWhy": "车外尾气浓度较高",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "39",
+      "title": "开启车内通风？",
+      "visibleWhy": "车内 CO2 浓度较高",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "40",
+      "title": "开启PM2.5净化？",
+      "visibleWhy": "车里的空气质量有点差",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "41",
+      "title": "开启吸烟通风？",
+      "visibleWhy": "车里似乎有人在抽烟",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "42",
+      "title": "开启智能风向？",
+      "visibleWhy": "阳光好像有点晒",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "43",
+      "title": "开启极速制冷？",
+      "visibleWhy": "车里有点热",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "44",
+      "title": "开启极速制热？",
+      "visibleWhy": "车里有点冷",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "45",
+      "title": "开启主驾座椅加热？",
+      "visibleWhy": "座椅可能有点冷",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "46",
+      "title": "来个圣诞氛围灯？",
+      "visibleWhy": "感受下圣诞的色彩吧！",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "47",
+      "title": "生成一段旅拍？",
+      "visibleWhy": "旅途中似乎有一些精彩瞬间",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "48",
+      "title": "试试NOMI DJ？",
+      "visibleWhy": "让NOMI做你的专属私人DJ",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "49",
+      "title": "打开亲子趣味互动？",
+      "visibleWhy": "让NOMI陪小朋友玩玩游戏",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "50",
+      "title": "开启影院模式？",
+      "visibleWhy": "全感官沉浸语影音娱乐",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "51",
+      "title": "开启小憩模式？",
+      "visibleWhy": "或许是时候休息一会儿",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "52",
+      "title": "点到点学习提示",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "53",
+      "title": "点到点功能引导",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "54",
+      "title": "打开360影像？",
+      "visibleWhy": "似乎前面有点窄",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "55",
+      "title": "开启后排儿童照看？",
+      "visibleWhy": "好像有儿童在后排",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "56",
+      "title": "电动门控制",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "57",
+      "title": "开启防晕车",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "58",
+      "title": "播放我喜欢的歌",
+      "visibleWhy": "来点儿音乐",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "59",
+      "title": "音场调整为主驾环绕",
+      "visibleWhy": "独自开车时使用此模式效果更佳",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "60",
+      "title": "去加电",
+      "visibleWhy": "电量有点低",
+      "conditionStatus": "仅需求线索，完整触发条件待确认",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    },
+    {
+      "id": "61",
+      "title": "备车习惯",
+      "visibleWhy": null,
+      "conditionStatus": "未读取到触发条件",
+      "implementationStatus": "全量集条目，未逐项核验已上线"
+    }
+  ]
+}
