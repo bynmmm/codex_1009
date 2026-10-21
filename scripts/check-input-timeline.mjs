@@ -1,0 +1,9 @@
+import vm from 'node:vm';import assert from 'node:assert/strict';import worker from '../worker/index.js';
+const html=await(await worker.fetch(new Request('https://test.local/'),{})).text(),app=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+assert.equal((html.match(/<textarea /g)||[]).length,6);assert(!html.includes('type="range"'));
+const values={prompt:'下雨了',sceneCabin:'副驾休息',sceneVehicle:'接近路口',sceneUser:'',sceneTask:'导航交互',scenePreference:'不喜欢语音打断'};
+const input=vm.createContext({$:id=>({value:values[id]})});vm.runInContext(app.slice(0,app.indexOf('const referenceCatalog=')),input);const scenario=input.readScenario();for(const [label,value]of [['车外环境','下雨了'],['车内环境','副驾休息'],['车辆状态','接近路口'],['用户任务','导航交互'],['用户偏好','不喜欢语音打断']])assert(scenario.includes(label+'：'+value));assert(!scenario.includes('用户状态：'));
+const cards=[];function el(tag){return{tag,children:[],attrs:{},append(...items){this.children.push(...items)},setAttribute(k,v){this.attrs[k]=v},replaceChildren(){this.children=[]}}}const root=el('div');root.append=x=>cards.push(x);root.replaceChildren=()=>cards.splice(0);
+let starts=0,resets=0;const view=vm.createContext({frames:[{at:0,title:'静默弱推荐'},{at:12,title:'升级强推荐'},{at:18,title:'语音适宜'}],duration:26,plan:{},active:true,elapsed:0,current:0,resetTransport(){resets++},start(){starts++},$:()=>root,document:{createElement:el}});
+vm.runInContext(app.slice(app.indexOf('function timelineGroups()'),app.indexOf('function clock()')),view);view.nodes();assert.equal(cards.length,3);assert(cards.every(c=>c.tag==='button'&&typeof c.onclick==='function'));assert(cards.every(c=>c.children.at(-1).attrs.role==='progressbar'));cards[2].onclick();assert.equal(view.elapsed,18);assert.equal(view.current,-1);assert.equal(starts,1);assert.equal(resets,1);
+console.log('Six categorized inputs, blank-as-unknown assembly, per-event phase buttons, noninteractive progress and jump/restart passed');

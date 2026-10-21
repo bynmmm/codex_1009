@@ -1,21 +1,64 @@
-# NOMI 情境化推荐 Demo
+# NOMI 主动协助 Proactive Interaction
 
-[公开网站](https://nomi-cabin-lab-1016.wcmmm0707.chatgpt.site)
+[在线 Demo](https://nomi-cabin-lab-1016.wcmmm0707.chatgpt.site/)
 
-支持豆包、OpenAI、DeepSeek 的真实服务端模型调用。访问者自行填写 API Key；密钥仅在页面内存保留，不写入仓库。
+此仓库同步截至 2026-10-21 的已发布项目代码。运行入口 `worker/index.js` 与网站源提交 `01305903e986777fce13c1587ad4441541e06b3f` 一致；图片、页面和服务端模型调用均在该 Worker 内。
 
-## 决策
-- C 决定是否推荐，P/T 决定强弱。
-- D 仅影响强推荐。弱推荐 D=0，立即出现，不因打扰成本延迟。
-- VUI 独立判断 now / after-trigger / off。弱推荐可以播报，强推荐可以静默，语音可有独立事件节点。
-- 模型结合历史行为记忆、当前任务、多人场景和候选能力，输出维度理由、情境适配摘要与引用规则 ID。
+## 主要功能
 
-## 规则参考
-`data/rule-catalog.json` 经用户明确授权公开，来自飞书“NOMI建议 - 故事集”全量集页面 UI。原表显示66条记录，当前整理61个主条目并合并同能力文案变体。visibleWhy 只记录可见副标题/需求线索；未读取的条件保留未知，不代表完整车端触发阈值。全量集未逐项核验上线状态。
+- 顶部六类情境输入：车外环境、车内环境、车辆状态、用户状态、用户任务、用户偏好。空白项视为未知，输入框下保留填写说明。
+- 上下布局：输入、全舱预览、分段时间轴、模型判断摘要。推荐仅在全舱内的 ICS 屏幕上出现，弱推荐从左进入，强推荐从上进入；支持无图紧凑卡片、全屏视频场景和仅语音提醒。
+- 接入 DeepSeek、豆包的真实服务端模型 API。DeepSeek 固定 `deepseek-flash`；豆包由用户填写已开通的模型或 `ep-…` 接入点 ID。服务端仅请求固定的官方供应商地址。
+- 语音与 GUI 强弱独立判断，可现在、触发后或静默。NOMI 表情、转向、灯光和自动播报按节点同步。
+- 每个演示分段可点击，从该段开始顺序播放；段内进度条不可拖动。保留重播、停止，时间轴按 2 倍演示速度播放，语音使用自然语速。
+- 浏览器整句普通话 TTS，支持音色选择、试听，并优先选择设备可用的普通话女声。没有接入 NOMI 官方语音包，实际音色取决于设备。
 
-## 运行与检查
-`node scripts/serve.mjs` 启动本地服务。依次运行 `node scripts/check.mjs`、`node scripts/check-providers.mjs`、`node scripts/check-decisions.mjs`。模型接口测试模拟上游响应，不发真实请求。
+## 决策策略
 
-`npm run build` 构建，`npm run validate` 校验 ESM。Sites Worker ESM 托管同源 `/api/plan`。GitHub 同步和线上发布为独立步骤。
+C 决定需求是否可信：C < 0.65 不推荐。P ≥ 0.70 或 T ≥ 0.75 时目标为强推荐，否则为弱推荐。D 越大，当前越不适合强推荐；目标为强推荐且 D ≥ 0.45 时，先显示静默弱推荐，待条件满足后再升级。无 TTS 的弱推荐 GUI 打扰成本按 Demo 假设为 0；语音打扰独立评估，不能认为弱推荐加语音的总成本也为 0。
 
-全舱、灯光、NOMI 表情、车辆能力均为仿真。时间轴固定2倍速，可拖动定位、点选事件和顺序播放。语音由浏览器中文 TTS 合成，并未接入真实 NOMI 音色。
+一般舒适需求（如座椅加热）通常使用低 P 弱推荐，是否附带语音由当前任务和乘员需求决定。全屏视频遮挡弱推荐时，模型可选择可见的小卡片或仅语音；可见性升级不会改写需求本身的 P。
+
+初始 D 分数不会随时间轴变化被覆盖。触发后的 D 是单独展示的演示值。延迟播报文案应以触发当时的状态表达，不重复已经完成的等待条件。
+
+## 密钥与隐私
+
+用户在“模型连接”中输入自己的 API Key。默认只保留在页面内存；可勾选“在此浏览器记住 API Key”使用当前网站的 localStorage 保存，并可随时清除。保存数据不会写回仓库或分享给其他访问者。当前设备的其他使用者或同源脚本可能访问本地存储，仅在个人设备上启用。
+
+请求通过同源 `/api/plan` 转发至用户所选供应商，不在服务端保存 Key。不包含预置真实 Key、浏览器运行数据或用户输入日志。
+
+## 运行
+
+需要支持原生 fetch、Request、Response 的 Node.js（本项目已在 Node 20 验证），无额外 npm 依赖。
+
+```bash
+node scripts/serve.mjs
+```
+
+打开 http://127.0.0.1:4173 。规则模拟无需密钥；真实模型调用需要网络、有效 Key、模型权限及可用额度。它是后端项目，不能仅使用 GitHub Pages 保留同源模型转发功能。
+
+## 检查与构建
+
+```bash
+node scripts/check.mjs
+node scripts/check-providers.mjs
+node scripts/check-decisions.mjs
+node scripts/check-output.mjs
+node scripts/check-voice.mjs
+node scripts/check-remember.mjs
+node scripts/check-input-timeline.mjs
+npm run build
+npm run validate
+```
+
+自动接口检查使用模拟上游响应，不会消耗模型额度。真实浏览器验证已跑通雨天路口案例和分段切换，并验证普通话音频起播及完成事件；不代表已验证所有设备上的主观听感。
+
+## 规则与边界
+
+`data/rule-catalog.json` 经用户明确授权公开，来自飞书页面 UI 的 61 个主条目（原表显示 66 条记录，合并同能力文案变体）。`visibleWhy` 仅是可见副标题/需求线索，不等于完整车端触发条件；未读取到的阈值保持未知，未逐项核验上线状态。
+
+车辆能力、灯光、情境触发及全屏影片画面均为仿真；确认卡片不会控制真实车辆。未连接实时传感器或车辆服务。阈值用于概念演示，不是量产安全标准。
+
+## 发布
+
+`.openai/hosting.json` 保留现有 Sites 项目身份，`npm run build` 输出 Worker ESM 部署产物。GitHub 源码同步与 Sites 网站发布是两个独立步骤，向本仓库提交不会自动发布网站。
